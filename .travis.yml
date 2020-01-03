@@ -6,4 +6,4 @@ before_install:
     - docker build -t hicofish/docker-react -f Dockerfile.dev .
 
 script: 
-    - docker run hicofish/docker-react npm run test -- --coverage
+    - docker run -e CI=true hicofish/docker-react npm run test -- --coverage
